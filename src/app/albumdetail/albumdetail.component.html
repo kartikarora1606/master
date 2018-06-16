@@ -1,0 +1,42 @@
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="album-content-wrapper" *ngIf="album">
+            <div class="row">
+              <div class="col-lg-4">
+              <img src="{{album['im:image'][2].label}}">
+              </div>
+              <div class="col-lg-8">
+                <ul style="list-style-type: none;">
+                  <li>
+                    <p style="font-weight: bold;font-size: 1.2em;">{{album['im:name'].label}}</p>
+                    </li>
+                    <li>
+                        <p style="">{{album['im:artist'].label}}</p>
+                        </li>
+                        <li>
+                            <p style="">{{album['im:price'].label}}</p>
+                            </li>
+                            <li>
+                                <p style="">{{album['im:releaseDate']['attributes'].label}}</p>
+                                </li>
+                                <li>
+                                    <p style="">{{album['rights'].label}}</p>
+                                    </li>
+                  </ul>
+              </div>
+            </div>
+            <div class = "row">
+              <div class="col-lg-4">
+              <p>Album Link : <a href="{{album['link']['attributes'].href}}" target="_blank">iTunes Link</a></p><br>
+              </div>
+              <div class="col-lg-8">
+              <p>Artist Link : <a href="{{album['im:artist']['attributes'].href}}" target="_blank">{{album['im:artist'].label}}</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
