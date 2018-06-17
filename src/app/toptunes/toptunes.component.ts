@@ -31,6 +31,7 @@ export class ToptunesComponent implements OnInit {
     
     this.getTopAlbums();
   }
+
   getTopAlbums(){
     console.log("Fecting Albums");
     this.tunesService.getTopTunes().subscribe(data =>{
@@ -42,9 +43,10 @@ export class ToptunesComponent implements OnInit {
         /** spinner ends after 5 seconds */
         this.spinner.hide();
     }, 2000);     
+  });
   }
-  
-  }
+
+
   onSelectAlbum(album : Entry) : void{
     this.selectedAlbum = album;
     this.showAlbumDetails = false;
